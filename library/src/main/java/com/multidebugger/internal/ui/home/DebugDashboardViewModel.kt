@@ -9,10 +9,10 @@ import com.multidebugger.internal.data.entity.DebugMessage
 internal class DebugDashboardViewModel(application: Application) : AndroidViewModel(application) {
 
     fun getDebugCategories(): LiveData<List<String>> {
-        return AppRepository.getDebugCategories(getApplication())
+        return AppRepository.getDebugCategories()
     }
 
     fun insertDebugMessage(debugMessage: DebugMessage) {
-        AppRepository.insertDebugMessage(debugMessage, getApplication())
+        AppRepository.insertDebugMessage(debugMessage)
     }
 }

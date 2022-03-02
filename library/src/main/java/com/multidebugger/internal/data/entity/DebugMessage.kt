@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-internal data class DebugMessage(
+public data class DebugMessage(
 
     @PrimaryKey(autoGenerate = true)
     val messageId: Int = 0,

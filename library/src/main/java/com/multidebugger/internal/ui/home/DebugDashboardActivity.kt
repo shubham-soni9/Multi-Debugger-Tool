@@ -21,7 +21,7 @@ internal class DebugDashboardActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val categoryViewPager = findViewById<ViewPager2>(R.id.categoryPager)
-        viewModel.getDebugCategories().observe(this, Observer { newCategoryList ->
+        viewModel.getDebugCategories().observe(this) { newCategoryList ->
             if (!isListEqual(preCategoryList, newCategoryList)) {
                 preCategoryList.clear()
                 preCategoryList.addAll(newCategoryList)
@@ -42,7 +42,7 @@ internal class DebugDashboardActivity : AppCompatActivity() {
                 }.attach()
                 tabLayout.tabMode = TabLayout.MODE_SCROLLABLE
             }
-        })
+        }
     }
 
     private fun isListEqual(list1: List<String>, list2: List<String>): Boolean {
