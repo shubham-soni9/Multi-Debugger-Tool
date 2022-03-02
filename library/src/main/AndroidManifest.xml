@@ -3,4 +3,10 @@
     package="com.multidebugger.library">
 
 
+    <application>
+        <activity
+            android:name="com.multidebugger.internal.ui.home.DebugDashboardActivity"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.multidebugger.library.task" />
+    </application>
 </manifest>

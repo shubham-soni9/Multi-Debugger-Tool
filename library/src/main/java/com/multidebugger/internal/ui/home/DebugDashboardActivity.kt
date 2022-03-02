@@ -2,7 +2,6 @@ package com.multidebugger.internal.ui.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
@@ -18,7 +17,8 @@ internal class DebugDashboardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_debug_dashboard)
+        val tabLayout = findViewById<TabLayout>(R.id.tabCategory)
 
         val categoryViewPager = findViewById<ViewPager2>(R.id.categoryPager)
         viewModel.getDebugCategories().observe(this) { newCategoryList ->
@@ -30,7 +30,6 @@ internal class DebugDashboardActivity : AppCompatActivity() {
                     fragmentManger = supportFragmentManager,
                     lifecycle = lifecycle
                 )
-                val tabLayout = findViewById<TabLayout>(R.id.tabCategory)
                 tabLayout.removeAllTabs()
                 for (category in preCategoryList) {
                     tabLayout.addTab(tabLayout.newTab().setText(category))

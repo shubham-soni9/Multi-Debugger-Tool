@@ -13,7 +13,7 @@ internal object AppSingleton {
         this.mApplication = application
     }
 
-    private fun getApplication(): Application {
+    fun getApplication(): Application {
         return mApplication!!
     }
 

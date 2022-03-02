@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Multi Debugger Tool</string>
+    <string name="notification_name">Multi Debugger</string>
+    <string name="notification_category">Multi Debugger Notification</string>
 </resources>
