@@ -8,6 +8,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_category.xml" value="0.10131712259371833" />
         <entry key="app/src/main/res/layout/item_message.xml" value="0.189209726443769" />
+        <entry key="library/src/main/res/font/allerta.xml" value="0.23854166666666668" />
+        <entry key="sample/src/main/res/layout/activity_main.xml" value="0.17119565217391305" />
       </map>
     </option>
   </component>

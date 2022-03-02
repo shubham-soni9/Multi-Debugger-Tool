@@ -13,4 +13,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Multi Debugger Tool"
-include ':app'
+include ':sample'
+include ':library'
+include ':library-no-op'
